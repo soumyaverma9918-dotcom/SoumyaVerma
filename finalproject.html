@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon.in Clone</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+nav {
+  background-color: #131921;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #ff9900;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  margin: 10px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  background-color: #febd69;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #ff9900;
+}
+
+main {
+  padding: 30px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.product h3 {
+  margin: 10px 0 5px;
+}
+
+.product p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.add-to-cart {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #e68a00;
+}
+
+footer {
+  background-color: #131921;
+  color: white;
+  padding: 30px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+@media (max-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">amazon<span>.in</span></div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search Amazon">
+    <button>🔍</button>
+  </div>
+
+  <div class="nav-links">
+    <a href="#">Sign In</a>
+    <a href="#">Orders</a>
+    <a href="#">Cart 🛒</a>
+  </div>
+</nav>
+
+<main>
+<section class="products">
+
+<article class="product">
+  <img src="https://m.media-amazon.com/images/I/610JZURd5NL.jpg">
+  <h3>Sunscreen </h3>
+  <p>₹2,499</p>
+  <button class="add-to-cart">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://images.apollo247.in/pub/media/catalog/product/p/d/pdp1_50ml.png">
+  <h3>Moisturizer</h3>
+  <p>₹3,999</p>
+  <button class="add-to-cart">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://swissbeauty.in/cdn/shop/files/SB-334_ColourMeLipBalm_01.jpg">
+  <h3>Lip Balm</h3>
+  <p>₹299</p>
+  <button class="add-to-cart">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://splashfragrance.in/wp-content/uploads/2025/10/2-min.png">
+  <h3>Perfume</h3>
+  <p>₹3,499</p>
+  <button class="add-to-cart">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://m.media-amazon.com/images/I/71kWymZ+c+L._SX679_.jpg">
+  <h3>Bluetooth Speaker</h3>
+  <p>₹1,999</p>
+  <button class="add-to-cart">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/091399/07/fnd/IND/fmt/png/PUMA-Plus-Everyday-Laptop-Backpack-21L">
+  <h3>Laptop Backpack</h3>
+  <p>₹1,299</p>
+  <button class="add-to-cart">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://m.media-amazon.com/images/I/61SUj2aKoEL._SX679_.jpg">
+  <h3>Wireless Mouse</h3>
+  <p>₹699</p>
+  <button class="add-to-cart">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://m.media-amazon.com/images/I/71JGCn1z1TL._SX679_.jpg">
+  <h3>Smartphone</h3>
+  <p>₹12,999</p>
+  <button class="add-to-cart">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://static-assets-prod.fnp.com/images/pr/l/v20220906115840/huggable-teddy-bear-with-bow-pink_1.jpg">
+  <h3>Plushie</h3>
+  <p>₹2,199</p>
+  <button class="add-to-cart">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://wonderfulengineering.com/wp-content/uploads/2020/11/10-best-power-banks-2.jpg">
+  <h3>Power Bank</h3>
+  <p>₹1,599</p>
+  <button class="add-to-cart">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://www.campusshoes.com/cdn/shop/files/FUNK_FUNK_WHITE-C.BLUE_01_2d776c4e-8e27-404d-827a-17dfdebd1690_900x.webp?v=1757921352">
+  <h3>Running Shoes</h3>
+  <p>₹3,299</p>
+  <button class="add-to-cart">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://i5.walmartimages.com/asr/0466ef2c-01bd-4bdc-8c63-157494098eeb.6e662c78bba6562708b423a75c868575.jpeg">
+  <h3>Coffee Maker</h3>
+  <p>₹4,499</p>
+  <button class="add-to-cart">Add to Cart</button>
+</article>
+
+</section>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <div>
+      <h4>Get to Know Us</h4>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+    </div>
+    <div>
+      <h4>Help</h4>
+      <a href="#">Your Account</a>
+      <a href="#">Returns</a>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+  <p>Amazon Clone • HTML & CSS</p>
+</footer>
+
+</body>
+</html>
