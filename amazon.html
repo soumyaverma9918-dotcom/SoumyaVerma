@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon.In</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+  line-height: 1.5;
+} 
+
+
+nav {
+  background-color: #131921;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #ff9900;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  margin: 10px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  background-color: #febd69;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 30px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.product h3 {
+  margin: 12px 0 5px;
+}
+
+.product p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.add-to-cart {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #e68a00;
+}
+
+footer {
+  background-color: #131921;
+  color: white;
+  padding: 30px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-links h4 {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+button:focus,
+a:focus,
+input:focus {
+  outline: 2px solid #ff9900;
+}
+
+@media (max-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">amazon<span>.in</span></div>
+
+  <div class="search-bar">
+    <label for="search" class="sr-only"></label>
+    <input id="search" type="text" placeholder="Search Amazon">
+    <button>🔍</button>
+  </div>
+
+  <div class="nav-links">
+    <a href="#">Sign In</a>
+    <a href="#">Orders</a>
+    <a href="#">Cart 🛒</a>
+  </div>
+</nav>
+
+<main>
+  <section class="products">
+
+    <article class="product">
+      <img src="https://m.media-amazon.com/images/I/610JZURd5NL.jpg" alt="Wireless headphones">
+      <h3>Wireless Headphones</h3>
+      <p>$29.99</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.apollo247.in/pub/media/catalog/product/p/d/pdp1_50ml.png" alt="Perfume bottle">
+      <h3>Perfume</h3>
+      <p>$49.99</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </article>
+
+    <article class="product">
+      <img src="https://swissbeauty.in/cdn/shop/files/SB-334_ColourMeLipBalm_01.jpg" alt="Lip balm">
+      <h3>Lip Balm</h3>
+      <p>$19.99</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </article>
+
+    <article class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDF6xqx3A020UkrTOX0sx1uADovdTDT5p_7w&s" alt="Smart watch">
+      <h3>Smart Watch</h3>
+      <p>$39.99</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <div>
+      <h4>Get to Know Us</h4>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+    </div>
+    <div>
+      <h4>Help</h4>
+      <a href="#">Your Account</a>
+      <a href="#">Returns</a>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+
+  <p>Amazon Clone • HTML & CSS Only</p>
+</footer>
+
+</body>
+</html>

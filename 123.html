@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon.in Clone</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+/* ---------- NAVBAR ---------- */
+nav {
+  background-color: #131921;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #ff9900;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  margin: 10px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  background-color: #febd69;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #ff9900;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  url("https://images-eu.ssl-images-amazon.com/images/G/31/img23/Wireless/OnePlus/GW/Jan/OP12/GW/OP12_PC_Hero_3000x1200._CB585898120_.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  background-color: #ff9900;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ---------- CATEGORIES ---------- */
+.categories {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.category {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.category:hover {
+  transform: translateY(-5px);
+}
+
+.category img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* ---------- PRODUCTS ---------- */
+main {
+  padding: 30px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  position: relative;
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: crimson;
+  color: white;
+  padding: 5px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.product h3 {
+  margin: 10px 0 5px;
+}
+
+.rating {
+  color: #ffa41c;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.price span {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.add-to-cart {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-to-cart:hover {
+  background-color: #e68a00;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: #131921;
+  color: white;
+  padding: 30px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  .products {
+    grid-template-columns: 1fr;
+  }
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
+</head>
+
+<body id="top">
+
+<nav>
+  <div class="logo">amazon<span>.in</span></div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search Amazon">
+    <button>🔍</button>
+  </div>
+
+  <div class="nav-links">
+    <a href="#">Sign In</a>
+    <a href="#">Orders</a>
+    <a href="#">Cart 🛒</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Great Indian Festival</h1>
+  <p>Up to 70% off on top brands</p>
+  <button>Shop Now</button>
+</section>
+
+<section class="categories">
+  <div class="category"><img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png"><p>Electronics</p></div>
+  <div class="category"><img src="https://cdn-icons-png.flaticon.com/512/892/892458.png"><p>Fashion</p></div>
+  <div class="category"><img src="https://cdn-icons-png.flaticon.com/512/3022/3022219.png"><p>Beauty</p></div>
+  <div class="category"><img src="https://cdn-icons-png.flaticon.com/512/609/609803.png"><p>Home</p></div>
+  <div class="category"><img src="https://cdn-icons-png.flaticon.com/512/1533/1533913.png"><p>Toys</p></div>
+</section>
+
+<main>
+<section class="products">
+
+<div class="product">
+  <div class="badge">Best Seller</div>
+  <img src="https://m.media-amazon.com/images/I/610JZURd5NL.jpg">
+  <h3>Wireless Headphones</h3>
+  <div class="rating">★★★★☆</div>
+  <p class="price">₹2,499 <span>₹3,499</span></p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="product">
+  <div class="badge">Deal</div>
+  <img src="https://m.media-amazon.com/images/I/71JGCn1z1TL._SX679_.jpg">
+  <h3>Smartphone</h3>
+  <div class="rating">★★★★★</div>
+  <p class="price">₹12,999 <span>₹15,999</span></p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="product">
+  <img src="https://m.media-amazon.com/images/I/71V--WZVUIL._SX679_.jpg">
+  <h3>Running Shoes</h3>
+  <div class="rating">★★★★☆</div>
+  <p class="price">₹3,299 <span>₹4,299</span></p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="product">
+  <img src="https://wonderfulengineering.com/wp-content/uploads/2020/11/10-best-power-banks-2.jpg">
+  <h3>Power Bank</h3>
+  <div class="rating">★★★★☆</div>
+  <p class="price">₹1,599 <span>₹1,999</span></p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+</section>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <div>
+      <h4>Get to Know Us</h4>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+    </div>
+    <div>
+      <h4>Help</h4>
+      <a href="#">Your Account</a>
+      <a href="#">Returns</a>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+  <p>Amazon Clone • HTML & CSS Only</p>
+</footer>
+
+</body>
+</html>
